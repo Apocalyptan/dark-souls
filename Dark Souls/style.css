@@ -1,0 +1,544 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+* {
+  box-sizing: border-box; }
+
+/* ===
+ * Generic
+ * === */
+body {
+  font-family: "Lato";
+  background-color: #3C4144;
+  text-shadow: 2px 2px black;
+  color: #FFF;
+  margin: 0; }
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto; }
+
+a {
+  text-decoration: none; }
+
+/* ===
+ * Header
+ * === */
+header {
+  background-color: #27292b;
+  text-align: center;
+  padding-bottom: 20px; }
+  header img {
+    width: 100%;
+    height: 100px;
+    padding: 5px; }
+    header img:active {
+      background-color: black; }
+    header img:hover {
+      opacity: 0.8; }
+  header > nav > div > ul {
+    list-style-type: none;
+    margin: 0; }
+  header > nav ul > li > a {
+    padding: 20px 20px;
+    margin: 5px;
+    border: 2px solid black;
+    display: block;
+    color: #FFF;
+    margin-right: 35px;
+    text-transform: uppercase; }
+    header > nav ul > li > a:hover {
+      background-color: #555b5e;
+      transition: 0.3s; }
+    header > nav ul > li > a:active {
+      background-color: black; }
+
+/* ===
+ * Jumbotron Section
+ * === */
+section.jumbotron {
+  background-image: url("https://www.gamewallpapers.com/wallpapers_slechte_compressie/01wallpapers/wallpaper_dark_souls_3_01_1280x720.jpg");
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin: 0; }
+  section.jumbotron h1 {
+    margin: 0; }
+  section.jumbotron .slogan {
+    margin: 20px;
+    margin-top: 135px;
+    padding: 20px;
+    display: inline-block;
+    color: #FFF;
+    background-color: rgba(43, 43, 43, 0.5);
+    font-size: 24px;
+    box-shadow: 2.5px 2.5px black;
+    text-shadow: 2px 2px black; }
+    section.jumbotron .slogan:hover {
+      cursor: pointer;
+      text-shadow: 3px 3px black; }
+
+/* ===
+ * Perks Section
+ * === */
+section.perks {
+  float: none;
+  text-align: center;
+  margin: 0 5px;
+  margin-top: 40px;
+  font-size: 16px; }
+  section.perks .fa {
+    height: 100px;
+    width: 100px;
+    border: none;
+    font-size: 40px;
+    line-height: 100px;
+    border-radius: 15%;
+    background-color: black; }
+
+.fa-play {
+  color: #578757; }
+
+.fa-stop {
+  color: #992626; }
+
+.fa-repeat {
+  color: #2f2f87; }
+
+/* ===
+ * Featuring Section
+ * === */
+section.featuring {
+  background-color: #27292b;
+  padding: 15px;
+  margin-top: 25px; }
+  section.featuring h2 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase; }
+  section.featuring p {
+    text-align: justify; }
+
+/* ===
+ * Gallery Section
+ * === */
+@media (max-width: 767px) {
+  section.gallery img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 70px; }
+  section.gallery .layer {
+    margin-top: 300px;
+    width: 100%;
+    height: 18%;
+    position: absolute;
+    text-align: center;
+    background-color: #272822;
+    opacity: 0.85; }
+  section.gallery .col-s-12 {
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    position: relative; }
+    section.gallery .col-s-12:hover .layer {
+      display: block; }
+  section.gallery i.fa {
+    font-size: 40px; }
+  section.gallery .fa {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    margin: 5px 10px;
+    padding-top: 8px;
+    text-shadow: none;
+    border-radius: 15%;
+    background-color: black;
+    color: #FFF; }
+    section.gallery .fa:hover {
+      background-color: #181a1b;
+      transition: 0.5s;
+      cursor: pointer; }
+    section.gallery .fa:active {
+      background-color: #798086; } }
+/* ===
+ * Gods Section
+ * === */
+section.gods {
+  margin-top: 80px;
+  text-align: center; }
+  section.gods .col-s-6 {
+    padding: 10px; }
+  section.gods img {
+    width: 100%;
+    border-radius: 50%; }
+  section.gods .description {
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding-top: 45%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    text-shadow: 2px 2px black;
+    box-shadow: none; }
+  section.gods .person {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+    section.gods .person:hover .description {
+      display: block; }
+
+/* ===
+ * Imagesection Section
+ * === */
+section.imagesection {
+  background-color: #27292b;
+  margin-top: 50px;
+  padding-top: 0;
+  color: white;
+  text-align: center; }
+  section.imagesection img {
+    width: 100%;
+    height: 400px; }
+  section.imagesection h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 32px; }
+  section.imagesection .col-s-12 {
+    background-color: inherit;
+    text-align: left; }
+  section.imagesection .col-s-8:last-child {
+    padding-bottom: 0; }
+  section.imagesection p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: justify; }
+
+/* ===
+ * Stats Section
+ * === */
+section.stats {
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 60px; }
+  section.stats .col-offset-2 {
+    margin: 0; }
+  section.stats h2 {
+    font-family: Raleway;
+    color: #FFF;
+    font-size: 40px;
+    margin-bottom: 0; }
+  section.stats strong {
+    color: #ddc478; }
+
+/* ===
+ * Footer
+ * === */
+footer {
+  background-color: #27292b;
+  text-align: center; }
+  footer h2 {
+    background-color: #1f2021; }
+  footer .col-s-12 {
+    padding: 0 10px; }
+    footer .col-s-12:nth-child(2) {
+      padding-bottom: 10px; }
+  footer .fa {
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 28px;
+    margin: 0 5px;
+    padding: 3px;
+    text-shadow: none;
+    border-radius: 15%;
+    background-color: black;
+    color: #FFF; }
+    footer .fa:hover {
+      background-color: #181a1b;
+      transition: 0.5s;
+      cursor: pointer; }
+    footer .fa:active {
+      background-color: #798086; }
+  footer strong {
+    background-color: #1f2021;
+    padding: 20px;
+    margin-top: 25px;
+    display: block; }
+  footer tr {
+    text-align: right;
+    display: block; }
+
+/* ======
+ * Media Tablet
+ * ====== */
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* ===
+   * Generic
+   * === */
+  section > .container {
+    text-align: center; }
+
+  /* ===
+   * Header
+   * === */
+  header {
+    height: 85px; }
+    header img {
+      margin-top: 5px;
+      width: 290px;
+      height: 75px;
+      float: left;
+      padding: 12.5px; }
+    header > nav > div > ul {
+      list-style-type: none;
+      float: right; }
+    header > nav ul > li {
+      display: inline-block; }
+      header > nav ul > li > a {
+        line-height: 75px;
+        padding: 0 20px;
+        display: block;
+        color: #FFF;
+        text-transform: uppercase;
+        border: none; }
+
+  /* ===
+   * Jumbotron Section
+   * === */
+  section.jumbotron {
+    height: 100vh; }
+    section.jumbotron .slogan {
+      margin-top: 250px;
+      font-size: 40px;
+      padding: 5%; }
+    section.jumbotron .fa {
+      height: 150px;
+      width: 150px;
+      font-size: 60px;
+      line-height: 150px; }
+
+  /* ===
+   * Gallery Section
+   * === */
+  section.gallery {
+    /* Nie wiem czy poprawnie zrobilem tak jak jest na gorze - w kazdym razie dziala :)
+     * section.gallery:last-child 
+     * 	div.row:last-child 
+     * 		div.col-s-12:last-child
+     * 			margin-bottom: 0 */ }
+    section.gallery:last-child:last-child:last-child {
+      margin-bottom: 0; }
+    section.gallery img {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 70px; }
+    section.gallery .col-s-12 {
+      padding: 0px;
+      margin: 0px;
+      line-height: 0px;
+      position: relative; }
+      section.gallery .col-s-12:hover .layer {
+        display: block; }
+    section.gallery .layer {
+      margin-top: 300px;
+      width: 100%;
+      height: 18%;
+      position: absolute;
+      text-align: center;
+      background-color: #272822;
+      opacity: 0.75; }
+    section.gallery i.fa {
+      font-size: 40px; }
+    section.gallery .fa {
+      width: 60px;
+      height: 60px;
+      line-height: 50px;
+      margin: 0px 10px;
+      margin-top: 2px;
+      padding-top: 8px;
+      text-shadow: none;
+      border-radius: 15%;
+      background-color: black;
+      color: #FFF; }
+      section.gallery .fa:hover {
+        background-color: #181a1b;
+        transition: 0.5s;
+        cursor: pointer; }
+      section.gallery .fa:active {
+        background-color: #798086; }
+
+  /* ===
+   * Gods Section
+   * === */
+  section.gods {
+    margin-top: 150px; }
+    section.gods .col-m-6 {
+      padding: 10px; }
+    section.gods img {
+      width: 100%; }
+    section.gods .description {
+      font-size: 36px; }
+
+  /* ===
+   * Imagesection Section
+   * === */
+  section.imagesection .col-m-6 {
+    padding: 10px; }
+  section.imagesection img {
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 450px; }
+  section.imagesection h2 {
+    padding-top: 20px;
+    text-align: center;
+    padding-left: 20px;
+    font-size: 40px; } }
+/* ======
+ * Media Desktop
+ * ====== */
+@media (min-width: 1200px) {
+  /* ===
+   * Header
+   * === */
+  header {
+    height: 85px; }
+    header img {
+      margin-top: 5px;
+      width: 290px;
+      height: 75px;
+      float: left;
+      padding: 12.5px; }
+    header > nav > div > ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none; }
+    header > nav ul {
+      float: right; }
+      header > nav ul > li {
+        display: inline-block; }
+        header > nav ul > li > a {
+          line-height: 75px;
+          padding: 0 20px;
+          display: block;
+          text-transform: uppercase;
+          border: none; }
+
+  /* ===
+   * Jumbotron Section
+   * === */
+  section.jumbotron .slogan {
+    float: right;
+    max-width: 80%;
+    margin-top: 25vh;
+    font-size: 30px;
+    padding: 5%; }
+
+  /* ===
+   * Perks Section
+   * === */
+  section.perks .fa {
+    height: 150px;
+    width: 150px;
+    font-size: 60px;
+    line-height: 150px; }
+
+  /* ===
+   * Featuring Section
+   * === */
+  section.featuring h2 {
+    font-size: 40px;
+    text-transform: uppercase; }
+
+  /* ===
+   * Gallery Section
+   * === */
+  section.gallery img {
+    width: 100%;
+    height: 250px; }
+  section.gallery .col-s-12 {
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    position: relative; }
+    section.gallery .col-s-12:hover .layer {
+      display: block; }
+  section.gallery .layer {
+    width: 100%;
+    height: 100%;
+    padding-top: 110px;
+    position: absolute;
+    text-align: center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); }
+  section.gallery i.fa {
+    font-size: 22px; }
+  section.gallery .fa {
+    width: 30px;
+    height: 30px;
+    line-height: 15px;
+    margin: 0 10px;
+    padding-top: 8px;
+    text-shadow: none;
+    border-radius: 15%;
+    background-color: black;
+    color: #FFF; }
+    section.gallery .fa:hover {
+      background-color: #181a1b;
+      transition: 0.5s;
+      cursor: pointer; }
+    section.gallery .fa:active {
+      background-color: #798086; }
+
+  /* ===
+   * Gods Section
+   * === */
+  section.gods {
+    margin-top: 100px; }
+    section.gods img {
+      height: 100%;
+      border-radius: 50%; }
+    section.gods h2 {
+      margin-right: 30px; }
+    section.gods .person {
+      position: relative;
+      height: 250px;
+      width: 250px; }
+
+  /* ===
+   * Imagesection Section
+   * === */
+  section.imagesection {
+    margin-top: 50px; }
+    section.imagesection img {
+      padding-top: 50px;
+      width: 350px;
+      height: 400px; }
+    section.imagesection h2,
+    section.imagesection .col-4 {
+      text-align: left; }
+    section.imagesection h2 {
+      padding-left: 20px;
+      font-size: 40px; }
+    section.imagesection .col-4 {
+      padding: 0 25px; }
+      section.imagesection .col-4:last-child {
+        padding-top: 12px; }
+    section.imagesection .col-8:last-child {
+      padding-top: 40px; }
+
+  /* ===
+   * Stats Section
+   * === */
+  section.stats .col-offset-2 {
+    margin-left: 16.66%; }
+  section.stats h2 {
+    font-size: 40px; }
+  section.stats strong {
+    color: #ddc478;
+    margin-top: 20px;
+    padding-top: 20px; } }

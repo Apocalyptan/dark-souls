@@ -1,0 +1,616 @@
+@import url(https://fonts.googleapis.com/css?family=Lato)
+@import url(https://fonts.googleapis.com/css?family=Raleway)
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css)
+
+*	
+	box-sizing: border-box
+	
+// Sass Colors //	
+$main-color: #3C4144
+$secondary-color: #27292b
+$font-color: #FFF
+$border-color: black
+$hover-color: rgb(85, 91, 94)
+$footer-color: #1f2021
+$mixin-color: darken($secondary-color, 60%)
+
+// Button Colors Mixin //
+@mixin btn-bg-color($bg-color)
+	background-color: $bg-color
+	color: $font-color
+	&:hover
+		background-color: lighten($bg-color, 10%)
+		transition: 0.5s
+		cursor: pointer
+	&:active
+		background-color: lighten($bg-color, 50%)
+
+
+/* ===
+ Generic
+ === */
+body
+	font-family: "Lato"
+	background-color: $main-color
+	text-shadow: 2px 2px $border-color
+	color: $font-color
+	margin: 0
+
+.container
+	max-width: 1200px
+	width: 100%
+	margin: auto
+
+a
+	text-decoration: none
+
+/* ===
+ Header
+ === */
+header 
+	background-color: $secondary-color
+	text-align: center
+	padding-bottom: 20px
+	
+	img 
+		width: 100%
+		height: 100px
+		padding: 5px
+		&:active
+			background-color: $border-color
+		&:hover
+			opacity: 0.8	
+ 
+	> nav > div > ul 
+		list-style-type: none
+		margin: 0
+				
+	> nav ul > li > a 
+		padding: 20px 20px
+		margin: 5px
+		border: 2px solid $border-color
+		display: block
+		color: $font-color
+		margin-right: 35px
+		text-transform: uppercase
+		&:hover 
+			background-color: $hover-color
+			transition: 0.3s
+		&:active
+			background-color: $border-color
+	
+/* ===
+ Jumbotron Section
+ === */
+section.jumbotron
+	background-image: url("https://www.gamewallpapers.com/wallpapers_slechte_compressie/01wallpapers/wallpaper_dark_souls_3_01_1280x720.jpg")
+	width: 100%
+	height: 75vh
+	background-size: cover
+	background-position: center
+	text-align: center
+	margin: 0
+	
+	h1
+		margin: 0
+
+	.slogan
+		margin: 20px
+		margin-top: 135px
+		padding: 20px
+		display: inline-block
+		color: $font-color
+		background-color: rgba(43, 43, 43, 0.5)
+		font-size: 24px
+		box-shadow: 2.5px 2.5px $border-color
+		text-shadow: 2px 2px $border-color
+		&:hover
+			cursor: pointer
+			text-shadow: 3px 3px $border-color
+
+/* ===
+ Perks Section
+ === */
+section.perks
+	float: none
+	text-align: center
+	margin: 0 5px
+	margin-top: 40px
+	font-size: 16px
+
+	.fa 
+		height: 100px
+		width: 100px
+		border: none
+		font-size: 40px
+		line-height: 100px
+		border-radius: 15%
+		background-color: $border-color
+
+.fa-play
+	color: rgb(87, 135, 87)
+	
+.fa-stop
+	color: rgb(153, 38, 38)
+	
+.fa-repeat
+	color: rgb(47, 47, 135)
+
+/* ===
+ Featuring Section
+ === */
+section.featuring 
+	background-color: $secondary-color
+	padding: 15px
+	margin-top: 25px
+	
+	h2 
+		text-align: center
+		font-size: 30px
+		text-transform: uppercase
+		
+	p
+		text-align: justify
+
+/* ===
+ Gallery Section
+ === */
+@media (max-width: 767px)
+	section.gallery
+		img 
+			width: 100%
+			height: 300px
+			margin-bottom: 70px
+			
+		.layer
+			margin-top: 300px
+			width: 100%
+			height: 18%
+			position: absolute
+			text-align: center
+			background-color: #272822
+			opacity: 0.85
+			
+		.col-s-12
+			padding: 0px
+			margin: 0px
+			line-height: 0px
+			position: relative
+			&:hover 
+				.layer
+					display: block
+					
+		i.fa 
+			font-size: 40px
+			
+		.fa 
+			width: 50px
+			height: 50px
+			line-height: 40px
+			margin: 5px 10px
+			padding-top: 8px
+			text-shadow: none
+			border-radius: 15%
+			@include btn-bg-color($mixin-color)
+	
+/* ===
+ Gods Section
+ === */
+section.gods
+	margin-top: 80px
+	text-align: center
+	
+	.col-s-6
+		padding: 10px
+		
+	img
+		width: 100%
+		border-radius: 50%
+
+	.description
+		position: absolute
+		display: none
+		height: 100%
+		width: 100%
+		padding-top: 45%
+		background-color: rgba(0, 0, 0, 0.3)
+		border-radius: 50%
+		text-shadow: 2px 2px $border-color
+		box-shadow: none
+
+	.person
+		position: relative
+		height: 100%
+		width: 100%
+		&:hover 
+			.description
+				display: block
+
+/* ===
+ Imagesection Section
+ === */
+section.imagesection
+	background-color: $secondary-color
+	margin-top: 50px
+	padding-top: 0
+	color: white
+	text-align: center
+	
+	img
+		width: 100%
+		height: 400px
+
+	h2
+		margin-top: 0
+		text-align: center
+		font-size: 32px
+
+	.col-s-12
+		background-color: inherit
+		text-align: left
+
+	.col-s-8:last-child
+		padding-bottom: 0
+
+	p
+		display: inline-block
+		margin: 0
+		padding: 0
+		text-align: justify
+
+/* ===
+ Stats Section
+ === */
+section.stats
+	text-align: center
+	padding: 20px
+	padding-bottom: 60px
+	
+	.col-offset-2
+		margin: 0
+		
+	h2
+		font-family: Raleway
+		color: $font-color
+		font-size: 40px
+		margin-bottom: 0
+		
+	strong
+		color: rgb(221, 196, 120)
+
+/* ===
+ Footer
+ === */
+footer
+	background-color: $secondary-color
+	text-align: center
+
+	h2
+		background-color: $footer-color
+
+	.col-s-12
+		padding: 0 10px
+		&:nth-child(2) 
+			padding-bottom: 10px
+
+	.fa
+		width: 40px
+		height: 40px
+		line-height: 35px
+		font-size: 28px
+		margin: 0 5px
+		padding: 3px
+		text-shadow: none
+		border-radius: 15%
+		@include btn-bg-color($mixin-color)
+
+	strong
+		background-color: $footer-color
+		padding: 20px
+		margin-top: 25px
+		display: block
+
+	tr
+		text-align: right
+		display: block
+		
+		
+		
+/* ======
+ Media Tablet
+ ====== */
+ 
+@media (min-width: 768px) and (max-width: 1199px)
+	/* ===
+	 Generic
+	 === */
+	section > .container
+		text-align: center
+			
+	/* ===
+	 Header
+	 === */
+	header
+		height: 85px
+		
+		img
+			margin-top: 5px
+			width: 290px
+			height: 75px
+			float: left
+			padding: 12.5px
+	
+		> nav > div > ul
+			list-style-type: none
+			float: right
+			
+		> nav ul > li
+			display: inline-block
+			> a
+				line-height: 75px
+				padding: 0 20px
+				display: block
+				color: $font-color
+				text-transform: uppercase
+				border: none
+					
+	/* ===
+	 Jumbotron Section
+	 === */
+	section.jumbotron 
+		height: 100vh
+		
+		.slogan
+			margin-top: 250px
+			font-size: 40px
+			padding: 5%
+	
+		.fa
+			height: 150px
+			width: 150px
+			font-size: 60px
+			line-height: 150px
+	/* ===
+	 Gallery Section
+	 === */
+	section.gallery
+		&:last-child 
+			&:last-child 
+				&:last-child
+					margin-bottom: 0
+		/* Nie wiem czy poprawnie zrobilem tak jak jest na gorze - w kazdym razie dziala :) 
+			section.gallery:last-child 
+				div.row:last-child 
+					div.col-s-12:last-child
+						margin-bottom: 0 */
+	
+		img
+			width: 100%
+			height: 300px
+			margin-bottom: 70px
+	
+		.col-s-12
+			padding: 0px
+			margin: 0px
+			line-height: 0px
+			position: relative
+			&:hover 
+				.layer
+					display: block
+		.layer
+			margin-top: 300px
+			width: 100%
+			height: 18%
+			position: absolute
+			text-align: center
+			background-color: #272822
+			opacity: 0.75
+			
+		i.fa
+			font-size: 40px
+
+		.fa
+			width: 60px
+			height: 60px
+			line-height: 50px
+			margin: 0px 10px
+			margin-top: 2px
+			padding-top: 8px
+			text-shadow: none
+			border-radius: 15%
+			@include btn-bg-color($mixin-color)
+		
+	/* ===
+	 Gods Section
+	 === */
+	section.gods
+		margin-top: 150px
+		
+		.col-m-6
+			padding: 10px
+			
+		img
+			width: 100%
+			
+		.description
+			font-size: 36px
+	
+	/* ===
+	 Imagesection Section
+	 === */
+
+	section.imagesection 
+		.col-m-6
+			padding: 10px
+			
+		img
+			padding-top: 20px
+			padding-left: 20px
+			height: 450px
+		h2 
+			padding-top: 20px
+			text-align: center
+			padding-left: 20px
+			font-size: 40px
+	
+
+
+/* ======
+ Media Desktop
+ ====== */
+
+@media (min-width: 1200px) 
+	/* ===
+	 Header
+	 === */
+	header
+		height: 85px
+		
+		img 
+			margin-top: 5px
+			width: 290px
+			height: 75px
+			float: left
+			padding: 12.5px
+			
+		> nav > div > ul
+			padding: 0
+			margin: 0
+			list-style-type: none
+
+		> nav ul
+			float: right
+			> li
+				display: inline-block	
+				> a 
+					line-height: 75px
+					padding: 0 20px
+					display: block
+					text-transform: uppercase
+					border: none
+	
+	/* ===
+	 Jumbotron Section
+	 === */
+	section.jumbotron 
+		.slogan
+			float: right
+			max-width: 80%
+			margin-top: 25vh
+			font-size: 30px
+			padding: 5%
+	
+	/* ===
+	 Perks Section
+	 === */
+	section.perks 
+		.fa
+			height: 150px
+			width: 150px
+			font-size: 60px
+			line-height: 150px
+	
+	/* ===
+	 Featuring Section
+	 === */
+	section.featuring 
+		h2
+			font-size: 40px
+			text-transform: uppercase
+	
+	/* ===
+	 Gallery Section
+	 === */
+	section.gallery 
+		img
+			width: 100%
+			height: 250px
+	
+		.col-s-12
+			padding: 0px
+			margin: 0px
+			line-height: 0px
+			position: relative
+			&:hover 
+				.layer
+					display: block
+	
+		.layer
+			width: 100%
+			height: 100%
+			padding-top: 110px
+			position: absolute
+			text-align: center
+			display: none
+			background-color: rgba(0, 0, 0, 0.5)
+	
+		i.fa
+			font-size: 22px
+	
+		.fa
+			width: 30px
+			height: 30px
+			line-height: 15px
+			margin: 0 10px
+			padding-top: 8px	
+			text-shadow: none
+			border-radius: 15%
+			@include btn-bg-color($mixin-color)
+	
+	/* ===
+	 Gods Section
+	 === */
+	section.gods
+		margin-top: 100px
+		img
+			height: 100%
+			border-radius: 50%
+	
+		h2
+			margin-right: 30px
+	
+		.person
+			position: relative
+			height: 250px
+			width: 250px
+	
+	/* ===
+	 Imagesection Section
+	 === */
+	section.imagesection
+		margin-top: 50px
+		img
+			padding-top: 50px
+			width: 350px
+			height: 400px
+		h2,
+		.col-4 
+			text-align: left
+			
+		h2
+			padding-left: 20px
+			font-size: 40px
+	
+		.col-4
+			padding: 0 25px
+			&:last-child
+				padding-top: 12px
+				
+		.col-8
+			&:last-child
+				padding-top: 40px
+	
+	/* ===
+	 Stats Section
+	 === */
+	section.stats 
+		.col-offset-2
+			margin-left: 16.66%
+	
+		h2
+			font-size: 40px
+	
+		strong
+			color: rgb(221, 196, 120)
+			margin-top: 20px
+			padding-top: 20px
